@@ -2,6 +2,7 @@ import { memo, FC } from "react";
 import { Route, Routes } from "react-router-dom";
 
 import { Login } from "../componetns/pages/Login";
+import { Registration } from "../componetns/pages/Registration";
 import { Base } from "../componetns/pages/Base";
 import { Home } from "../componetns/pages/Home";
 import { UserManagement } from "../componetns/pages/UserManagement";
@@ -12,6 +13,7 @@ export const Router: FC = memo(() => {
   return (
     <Routes>
       <Route index element={<Login />} />
+      <Route path="signup" element={<Registration />} />
       <Route path="home" element={<Base />}>
         <Route index element={<Home />} />
         <Route path="user_management" element={<UserManagement />} />
